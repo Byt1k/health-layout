@@ -1,0 +1,238 @@
+@import '_zeroing';
+
+// @media (min-width: 1400px) {
+//     .container, .container-lg, .container-md, .container-sm, .container-xl {
+//         max-width: 1310px;
+//     }
+// }
+
+a, button {
+    transition: all .3s ease !important;
+}
+
+$mainColor: #F16321;
+$secondaryColor: #0FA8AE;
+$textColor: #16324E;
+
+%fontGeorgia {
+    font-family: 'Georgia Bold', serif;
+}
+
+%mainBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    background-color: $mainColor;
+    border-radius: 100px;
+    width: 250px;
+    height: 73px;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+%secondaryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: $secondaryColor;
+    border-radius: 100px;
+    width: 250px;
+    height: 62px;
+    
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+%link {
+    color: $secondaryColor;
+    font-weight: 500;
+    font-size: inherit;
+
+    &:hover {
+        color: $mainColor;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 300;
+    color: $textColor;
+}
+
+@font-face{
+    font-family: 'Georgia Bold';
+    src: url('../fonts/Georgia-Bold.eot');
+    src: url('../fonts/Georgia-Bold.eot?iefix') format('eot'),
+    url('../fonts/Georgia-Bold.woff') format('woff'),
+    url('../fonts/Georgia-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.sectionTitle {
+    font-size: 50px;
+    @extend %fontGeorgia;
+    line-height: 100%;
+}
+
+.main {
+    padding-top: 20px;
+    background: #FAF6F5;
+
+    .main__container {
+        display: flex;
+
+        .left {
+    
+            .title {
+                @extend %fontGeorgia;
+                max-width: 590px;
+                margin-top: 95px;
+                font-weight: 700;
+                font-size: 58px;
+                line-height: 100%;
+            }
+    
+            .text {
+                max-width: 540px;
+                font-size: 22px;
+                margin: 22px 0 28px 0;
+                line-height: 150%;
+            }
+    
+            .btn {
+                @extend %mainBtn;
+            }
+        }
+    
+        .right {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.care {
+    padding-top: 113px;
+    
+    .sectionTitle {
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 150%;
+        max-width: 690px;
+
+        span {
+            content: url(../img/metro.png);
+            margin-right: 5px;
+        }
+    }
+}
+
+.differences {
+    padding: 113px 0 95px 0;
+
+    .sectionTitle {
+        margin-bottom: 44px;
+    }
+
+    .item {
+        p {
+            font-size: 18px;
+            line-height: 140%;
+            margin: 18px 0 37px 0;
+        }
+    }
+
+    .links {
+        font-size: 22px;
+        line-height: 150%;
+    
+        b {
+            font-weight: 500;
+        }
+
+        a {
+            @extend %link;
+        }
+    }
+}
+
+.directions {
+    padding: 88px 0;
+    background: #F9FAFB;
+
+    .sectionTitle {
+        margin-bottom: 40px;
+    }
+
+    .item {
+        width: 100%;
+        height: 544px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.07), 0px 10px 20px -4px rgba(0, 0, 0, 0.08);
+        border-radius: 16px;
+        margin-bottom: 30px;
+
+        .top {
+            img {
+                width: 100%;
+                height: 207px;
+                object-fit: cover;
+                border-radius: 16px 16px 0 0;
+            }
+        }
+
+        .bottom {
+            padding: 24px 32px;
+
+            .title {
+                margin-bottom: 12px;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 140%;
+            }
+
+            .link {
+                font-size: 16px;
+                color: $textColor;
+                display: block;
+                margin-bottom: 8px;
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+
+            .showAll {
+                @extend %link;
+                display: flex;
+
+                span {
+                    display: block;
+                    margin: -4px 5px 0 0; 
+                }
+            }
+        }
+    }
+
+    .all-directions {
+        @extend %secondaryBtn;
+        width: 361px;
+        margin: 0 auto;
+    }
+}
