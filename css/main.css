@@ -827,6 +827,9 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .news .news__slider .owl-dots {
+    display: none !important;
+  }
   .request .form .input {
     width: 100%;
     height: 63px;

@@ -740,6 +740,14 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .news {
+        .news__slider {
+            .owl-dots {
+                display: none !important;
+            }
+        }
+    }
+
     .request {
         .form {
             .input {
