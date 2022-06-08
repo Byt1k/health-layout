@@ -8,6 +8,17 @@ $('.doctors__slider').owlCarousel({
         '<img src="img/next.svg" alt="next"/>'
     ],
     responsive:{
+        0: {
+            items: 1,
+            nav: false
+        },
+        768: {
+            nav: false,
+            items: 2
+        },
+        992: {
+            items: 2
+        },
         1200:{
             items: 3
         }
@@ -24,6 +35,17 @@ $('.news__slider').owlCarousel({
         '<img src="img/next.svg" alt="next"/>'
     ],
     responsive:{
+        0: {
+            items: 1,
+            nav: false
+        },
+        768: {
+            nav: false,
+            items: 2
+        },
+        992: {
+            items: 2
+        },
         1200:{
             items: 3
         }
