@@ -300,6 +300,10 @@ body {
   font-weight: 500;
 }
 
+.differences .links a {
+  border-bottom: 1px solid #B7E5E7;
+}
+
 .directions {
   padding: 88px 0;
   background: #F9FAFB;
@@ -827,8 +831,27 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .care {
+    padding-top: 50px;
+  }
+  .differences {
+    padding: 50px 0;
+  }
+  .directions {
+    padding: 50px 0 70px 0;
+  }
+  .doctors {
+    padding-top: 70px;
+  }
+  .doctors .doctors__slider .item img {
+    width: 250px;
+    height: 290px;
+  }
   .news .news__slider .owl-dots {
     display: none !important;
+  }
+  .advantages {
+    padding: 50px 0;
   }
   .request .form .input {
     width: 100%;
