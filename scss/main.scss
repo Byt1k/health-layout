@@ -642,6 +642,297 @@ body {
     } 
 }
 
+
+
+// О клинике
+
+.about {
+    padding-top: 90px;
+
+    .pageTitle {
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 100%;
+        @extend %fontGeorgia;
+        margin-bottom: 24px;
+    }
+
+    .text {
+        font-size: 22px;
+        line-height: 150%;
+        margin-bottom: 8px;
+    }
+
+    .main-img {
+        margin: 26px 0 36px 0;
+        border-radius: 16px;
+        max-width: 100%;
+    }
+
+    .title {
+        margin-top: 60px;
+        @extend %fontGeorgia;
+        margin-bottom: 20px;
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .galary {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+
+        img {
+            width: 185px;
+            height: 120px;
+            object-fit: cover;
+        }
+    }
+
+    .licencies {
+        display: flex;
+        gap: 25px;
+
+        img {
+            width: 225px;
+            height: 315px;
+            object-fit: cover;
+        }
+    }
+
+    .second-text {
+        font-size: 19.5px;
+        line-height: 150%;
+        margin-bottom: 3px;
+    }
+
+    .partners {
+        margin-top: 28px;
+        display: flex;
+        justify-content: space-between;
+        row-gap: 45px;
+        flex-wrap: wrap;
+        .item {
+            width: 30%;
+
+            img {
+                width: 160px;
+                height: 70px;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+
+            .name {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 140%;
+            }
+
+            .desc {
+                font-size: 15px;
+                line-height: 150%;
+                margin: 5px 0 20px 0;
+            }
+
+            .contact-title {
+                font-size: 15px;
+                line-height: 150%;
+                color: #95A8BB;
+            }
+            span {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .all-partners {
+        width: 100%;
+        height: 340px;
+        margin-top: -340px;
+        position: relative;
+        z-index: 90;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 63.47%);
+        // background-color: #000;
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            @extend %secondaryBtn;
+            width: 360px;
+            height: 61px;
+            margin-top: 187px;
+        }
+    }
+
+    .vacancies-title {
+        margin: 0 0 7px 0;
+    }
+    
+    .vacancies-contacts {
+        margin: 30px 0;
+        display: flex;
+        gap: 34px;
+        align-items: center;
+
+        .send-resume {
+            @extend %mainBtn;
+            gap: 7px;
+            font-size: 20px;
+            width: 290px;
+            height: 70px;
+        }
+
+        .item {
+            .item__title {
+               line-height: 150%;
+               font-size: 18px; 
+               color: #95A8BB;
+            }
+
+            .item__body {
+                display: block;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 150%;
+                color: $textColor;
+                border-bottom: 1px solid #DCE3EA;
+
+            }
+        }
+    }
+
+    .accordion {
+        .accordion__item {
+            border-bottom: 1px dashed #B8C6D3;
+            padding-bottom: 22px;
+
+            .accordion__button {
+                width: 100%;
+                padding-top: 22px;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 150%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                &::after {
+                    content: url(../img/accordion-arrow.svg);
+                    position: absolute;
+                    right: 0;
+                    top: 25px;
+                    transition: all .3s ease;
+                }
+
+                &:not(.collapsed)::after {
+                    content: none;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .vacancies-accordion {
+        .accordion__body {
+            .location {
+                font-size: 18px;
+                line-height: 150%;
+                color: #7F95AA;
+                margin-bottom: 16px;
+            }
+
+            .desc {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 50px;
+                row-gap: 20px;
+
+                .item {
+                    font-size: 18px;   
+                    line-height: 150%;
+
+                    .item__title {
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            
+            .respond {
+                @extend %secondaryBtn;
+                width: 180px;
+                height: 50px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .organization-accordion {
+        .accordion__body {
+            padding-top: 6px;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+
+    .overseers {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .item {
+            width: 31%;
+
+            .name {
+                margin: 23px 0;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 140%;
+            }
+
+            .contact-title {
+                color: #95A8BB;
+                font-size: 15px;
+                line-height: 150%;
+            }
+
+            span {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .requisites {
+        padding-bottom: 70px;
+
+        .item {
+            display: flex;
+            margin-bottom: 16px;
+            font-size: 17px;
+            line-height: 150%;
+
+            .item__title {
+                width: 300px;
+                margin-right: 30px;
+                color: #7F95AA;
+            }
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 1200px) {
     %mainBtn {
         font-size: 20px;

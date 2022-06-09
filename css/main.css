@@ -100,11 +100,11 @@ a, button {
   transition: all .3s ease !important;
 }
 
-.sectionTitle, .main .main__container .left .title {
+.sectionTitle, .main .main__container .left .title, .about .pageTitle, .about .title {
   font-family: 'Georgia Bold', serif;
 }
 
-.main .main__container .left .btn, .request .form .submit {
+.main .main__container .left .btn, .request .form .submit, .about .vacancies-contacts .send-resume {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,11 +123,11 @@ a, button {
   height: 73px;
 }
 
-.main .main__container .left .btn:hover, .request .form .submit:hover {
+.main .main__container .left .btn:hover, .request .form .submit:hover, .about .vacancies-contacts .send-resume:hover {
   opacity: 0.8;
 }
 
-.directions .all-directions {
+.directions .all-directions, .about .all-partners .btn, .about .vacancies-accordion .accordion__body .respond {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +146,7 @@ a, button {
   height: 62px;
 }
 
-.directions .all-directions:hover {
+.directions .all-directions:hover, .about .all-partners .btn:hover, .about .vacancies-accordion .accordion__body .respond:hover {
   opacity: 0.8;
 }
 
@@ -760,8 +760,322 @@ body {
   font-size: 15px;
 }
 
+.about {
+  padding-top: 90px;
+}
+
+.about .pageTitle {
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+
+.about .text {
+  font-size: 22px;
+  line-height: 150%;
+  margin-bottom: 8px;
+}
+
+.about .main-img {
+  margin: 26px 0 36px 0;
+  border-radius: 16px;
+  max-width: 100%;
+}
+
+.about .title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.about .galary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.about .galary img {
+  width: 185px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .licencies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.about .licencies img {
+  width: 225px;
+  height: 315px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about .second-text {
+  font-size: 19.5px;
+  line-height: 150%;
+  margin-bottom: 3px;
+}
+
+.about .partners {
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 45px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about .partners .item {
+  width: 30%;
+}
+
+.about .partners .item img {
+  width: 160px;
+  height: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.about .partners .item .name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.about .partners .item .desc {
+  font-size: 15px;
+  line-height: 150%;
+  margin: 5px 0 20px 0;
+}
+
+.about .partners .item .contact-title {
+  font-size: 15px;
+  line-height: 150%;
+  color: #95A8BB;
+}
+
+.about .partners .item span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.about .all-partners {
+  width: 100%;
+  height: 340px;
+  margin-top: -340px;
+  position: relative;
+  z-index: 90;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(63.47%, #FFFFFF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 63.47%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .all-partners .btn {
+  width: 360px;
+  height: 61px;
+  margin-top: 187px;
+}
+
+.about .vacancies-title {
+  margin: 0 0 7px 0;
+}
+
+.about .vacancies-contacts {
+  margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 34px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .vacancies-contacts .send-resume {
+  gap: 7px;
+  font-size: 20px;
+  width: 290px;
+  height: 70px;
+}
+
+.about .vacancies-contacts .item .item__title {
+  line-height: 150%;
+  font-size: 18px;
+  color: #95A8BB;
+}
+
+.about .vacancies-contacts .item .item__body {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #16324E;
+  border-bottom: 1px solid #DCE3EA;
+}
+
+.about .accordion .accordion__item {
+  border-bottom: 1px dashed #B8C6D3;
+  padding-bottom: 22px;
+}
+
+.about .accordion .accordion__item .accordion__button {
+  width: 100%;
+  padding-top: 22px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.about .accordion .accordion__item .accordion__button::after {
+  content: url(../img/accordion-arrow.svg);
+  position: absolute;
+  right: 0;
+  top: 25px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.about .accordion .accordion__item .accordion__button:not(.collapsed)::after {
+  content: none;
+}
+
+.about .accordion .accordion__item:last-child {
+  border-bottom: none;
+}
+
+.about .vacancies-accordion .accordion__body .location {
+  font-size: 18px;
+  line-height: 150%;
+  color: #7F95AA;
+  margin-bottom: 16px;
+}
+
+.about .vacancies-accordion .accordion__body .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 20px;
+}
+
+.about .vacancies-accordion .accordion__body .desc .item {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.about .vacancies-accordion .accordion__body .desc .item .item__title {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.about .vacancies-accordion .accordion__body .respond {
+  width: 180px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.about .organization-accordion .accordion__body {
+  padding-top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.about .overseers {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about .overseers .item {
+  width: 31%;
+}
+
+.about .overseers .item .name {
+  margin: 23px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.about .overseers .item .contact-title {
+  color: #95A8BB;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.about .overseers .item span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.about .requisites {
+  padding-bottom: 70px;
+}
+
+.about .requisites .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 150%;
+}
+
+.about .requisites .item .item__title {
+  width: 300px;
+  margin-right: 30px;
+  color: #7F95AA;
+}
+
 @media screen and (max-width: 1200px) {
-  .main .main__container .left .btn, .request .form .submit {
+  .main .main__container .left .btn, .request .form .submit, .about .vacancies-contacts .send-resume {
     font-size: 20px;
     height: 61px;
   }
