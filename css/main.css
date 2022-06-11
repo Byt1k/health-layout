@@ -100,11 +100,11 @@ a, button {
   transition: all .3s ease !important;
 }
 
-.sectionTitle, .main .main__container .left .title, .about .pageTitle, .about .title {
+.sectionTitle, .main .main__container .left .title, .about-page .about .pageTitle, .about-page .title {
   font-family: 'Georgia Bold', serif;
 }
 
-.main .main__container .left .btn, .request .form .submit, .about .vacancies-contacts .send-resume {
+.main .main__container .left .btn, .request .form .submit, .about-page .vacancies .vacancies-contacts .send-resume {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,11 +123,11 @@ a, button {
   height: 73px;
 }
 
-.main .main__container .left .btn:hover, .request .form .submit:hover, .about .vacancies-contacts .send-resume:hover {
+.main .main__container .left .btn:hover, .request .form .submit:hover, .about-page .vacancies .vacancies-contacts .send-resume:hover {
   opacity: 0.8;
 }
 
-.directions .all-directions, .about .all-partners .btn, .about .vacancies-accordion .accordion__body .respond {
+.directions .all-directions, .about-page .partners .all-partners .btn, .about-page .vacancies .vacancies-accordion .accordion__body .respond {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +146,7 @@ a, button {
   height: 62px;
 }
 
-.directions .all-directions:hover, .about .all-partners .btn:hover, .about .vacancies-accordion .accordion__body .respond:hover {
+.directions .all-directions:hover, .about-page .partners .all-partners .btn:hover, .about-page .vacancies .vacancies-accordion .accordion__body .respond:hover {
   opacity: 0.8;
 }
 
@@ -760,30 +760,30 @@ body {
   font-size: 15px;
 }
 
-.about {
-  padding-top: 90px;
+.about-page {
+  padding-top: 70px;
 }
 
-.about .pageTitle {
+.about-page .about .pageTitle {
   font-weight: 700;
   font-size: 58px;
   line-height: 100%;
   margin-bottom: 24px;
 }
 
-.about .text {
+.about-page .about .text {
   font-size: 22px;
   line-height: 150%;
   margin-bottom: 8px;
 }
 
-.about .main-img {
+.about-page .about .main-img {
   margin: 26px 0 36px 0;
   border-radius: 16px;
   max-width: 100%;
 }
 
-.about .title {
+.about-page .title {
   margin-top: 60px;
   margin-bottom: 20px;
   font-size: 34px;
@@ -791,7 +791,7 @@ body {
   line-height: 120%;
 }
 
-.about .galary {
+.about-page .galary .galary__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -803,34 +803,36 @@ body {
   gap: 10px;
 }
 
-.about .galary img {
+.about-page .galary .galary__wrapper img {
   width: 185px;
   height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.about .licencies {
+.about-page .licencies .licencies__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 23px;
 }
 
-.about .licencies img {
+.about-page .licencies .licencies__wrapper img {
   width: 225px;
   height: 315px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.about .second-text {
+.about-page .second-text {
   font-size: 19.5px;
   line-height: 150%;
   margin-bottom: 3px;
 }
 
-.about .partners {
+.about-page .partners .partners__wrapper {
   margin-top: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -843,11 +845,11 @@ body {
       flex-wrap: wrap;
 }
 
-.about .partners .item {
+.about-page .partners .partners__wrapper .item {
   width: 30%;
 }
 
-.about .partners .item img {
+.about-page .partners .partners__wrapper .item img {
   width: 160px;
   height: 70px;
   -o-object-fit: contain;
@@ -855,30 +857,30 @@ body {
   margin-bottom: 10px;
 }
 
-.about .partners .item .name {
+.about-page .partners .partners__wrapper .item .name {
   font-size: 18px;
   font-weight: 500;
   line-height: 140%;
 }
 
-.about .partners .item .desc {
+.about-page .partners .partners__wrapper .item .desc {
   font-size: 15px;
   line-height: 150%;
   margin: 5px 0 20px 0;
 }
 
-.about .partners .item .contact-title {
+.about-page .partners .partners__wrapper .item .contact-title {
   font-size: 15px;
   line-height: 150%;
   color: #95A8BB;
 }
 
-.about .partners .item span {
+.about-page .partners .partners__wrapper .item span {
   display: block;
   margin-bottom: 5px;
 }
 
-.about .all-partners {
+.about-page .partners .all-partners {
   width: 100%;
   height: 340px;
   margin-top: -340px;
@@ -894,55 +896,20 @@ body {
           justify-content: center;
 }
 
-.about .all-partners .btn {
+.about-page .partners .all-partners .btn {
   width: 360px;
   height: 61px;
   margin-top: 187px;
 }
 
-.about .vacancies-title {
-  margin: 0 0 7px 0;
-}
-
-.about .vacancies-contacts {
-  margin: 30px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 34px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about .vacancies-contacts .send-resume {
-  gap: 7px;
-  font-size: 20px;
-  width: 290px;
-  height: 70px;
-}
-
-.about .vacancies-contacts .item .item__title {
-  line-height: 150%;
-  font-size: 18px;
-  color: #95A8BB;
-}
-
-.about .vacancies-contacts .item .item__body {
-  display: block;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  color: #16324E;
-  border-bottom: 1px solid #DCE3EA;
-}
-
-.about .accordion .accordion__item {
+.about-page .accordion .accordion__item {
   border-bottom: 1px dashed #B8C6D3;
   padding-bottom: 22px;
 }
 
-.about .accordion .accordion__item .accordion__button {
+.about-page .accordion .accordion__item .accordion__button {
+  text-align: left;
+  padding-right: 50px;
   width: 100%;
   padding-top: 22px;
   font-weight: 500;
@@ -960,7 +927,7 @@ body {
   position: relative;
 }
 
-.about .accordion .accordion__item .accordion__button::after {
+.about-page .accordion .accordion__item .accordion__button::after {
   content: url(../img/accordion-arrow.svg);
   position: absolute;
   right: 0;
@@ -969,22 +936,59 @@ body {
   transition: all .3s ease;
 }
 
-.about .accordion .accordion__item .accordion__button:not(.collapsed)::after {
+.about-page .accordion .accordion__item .accordion__button:not(.collapsed)::after {
   content: none;
 }
 
-.about .accordion .accordion__item:last-child {
+.about-page .accordion .accordion__item:last-child {
   border-bottom: none;
 }
 
-.about .vacancies-accordion .accordion__body .location {
+.about-page .vacancies .vacancies-title {
+  margin: 0 0 7px 0;
+}
+
+.about-page .vacancies .vacancies-contacts {
+  margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 34px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-page .vacancies .vacancies-contacts .send-resume {
+  gap: 7px;
+  font-size: 20px;
+  width: 290px;
+  height: 70px;
+}
+
+.about-page .vacancies .vacancies-contacts .item .item__title {
+  line-height: 150%;
+  font-size: 18px;
+  color: #95A8BB;
+}
+
+.about-page .vacancies .vacancies-contacts .item .item__body {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #16324E;
+  border-bottom: 1px solid #DCE3EA;
+}
+
+.about-page .vacancies .vacancies-accordion .accordion__body .location {
   font-size: 18px;
   line-height: 150%;
   color: #7F95AA;
   margin-bottom: 16px;
 }
 
-.about .vacancies-accordion .accordion__body .desc {
+.about-page .vacancies .vacancies-accordion .accordion__body .desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,23 +999,23 @@ body {
   row-gap: 20px;
 }
 
-.about .vacancies-accordion .accordion__body .desc .item {
+.about-page .vacancies .vacancies-accordion .accordion__body .desc .item {
   font-size: 18px;
   line-height: 150%;
 }
 
-.about .vacancies-accordion .accordion__body .desc .item .item__title {
+.about-page .vacancies .vacancies-accordion .accordion__body .desc .item .item__title {
   font-weight: 500;
   margin-bottom: 5px;
 }
 
-.about .vacancies-accordion .accordion__body .respond {
+.about-page .vacancies .vacancies-accordion .accordion__body .respond {
   width: 180px;
   height: 50px;
   margin-top: 20px;
 }
 
-.about .organization-accordion .accordion__body {
+.about-page .organization .organization-accordion .accordion__body {
   padding-top: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1023,7 +1027,7 @@ body {
   gap: 5px;
 }
 
-.about .overseers {
+.about-page .overseers .overseers__wrapper {
   margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1033,33 +1037,34 @@ body {
   gap: 30px;
 }
 
-.about .overseers .item {
+.about-page .overseers .overseers__wrapper .item {
   width: 31%;
 }
 
-.about .overseers .item .name {
+.about-page .overseers .overseers__wrapper .item .name {
   margin: 23px 0;
   font-size: 18px;
   font-weight: 500;
   line-height: 140%;
 }
 
-.about .overseers .item .contact-title {
+.about-page .overseers .overseers__wrapper .item .contact-title {
   color: #95A8BB;
   font-size: 15px;
   line-height: 150%;
 }
 
-.about .overseers .item span {
+.about-page .overseers .overseers__wrapper .item span {
   display: block;
   margin-bottom: 5px;
 }
 
-.about .requisites {
+.about-page .requisites .requisites__wrapper {
+  margin-top: 15px;
   padding-bottom: 70px;
 }
 
-.about .requisites .item {
+.about-page .requisites .requisites__wrapper .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1068,14 +1073,85 @@ body {
   line-height: 150%;
 }
 
-.about .requisites .item .item__title {
+.about-page .requisites .requisites__wrapper .item .item__title {
+  min-width: 300px;
   width: 300px;
   margin-right: 30px;
   color: #7F95AA;
 }
 
+.sidebar {
+  position: fixed;
+  padding: 32px 0;
+  width: 280px;
+  border: 1px solid #DCE3EA;
+  border-radius: 16px;
+}
+
+.sidebar .sidebar__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  margin-bottom: 14px;
+  margin-left: 34px;
+}
+
+.sidebar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar ul li {
+  height: 28px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.sidebar ul li a {
+  padding-left: 30px;
+  display: block;
+  color: #5E7790;
+  border-left: 4px solid #fff;
+}
+
+.sidebar ul li a.active {
+  border-left: 4px solid #0FA8AE;
+  color: #16324E;
+}
+
+.sidebar ul li .count {
+  width: 22px;
+  height: 22px;
+  background: #16324E;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+}
+
 @media screen and (max-width: 1200px) {
-  .main .main__container .left .btn, .request .form .submit, .about .vacancies-contacts .send-resume {
+  .main .main__container .left .btn, .request .form .submit, .about-page .vacancies .vacancies-contacts .send-resume {
     font-size: 20px;
     height: 61px;
   }
@@ -1107,6 +1183,20 @@ body {
     margin: 0 0 15px 0;
     width: 48%;
     height: 73px;
+  }
+  .about-page .sidebar {
+    width: 240px;
+  }
+  .about-page .galary .galary__wrapper img {
+    width: 225px;
+    height: 140px;
+  }
+  .about-page .vacancies .vacancies-contacts .send-resume {
+    width: 275px;
+  }
+  .about-page .requisites .requisites__wrapper .item .item__title {
+    min-width: 235px;
+    width: 235px;
   }
 }
 
@@ -1141,6 +1231,9 @@ body {
   }
   .request .form .submit {
     width: 100%;
+  }
+  .about-page .sidebar {
+    display: none;
   }
 }
 
@@ -1195,5 +1288,57 @@ body {
   .footer .container .credits {
     margin-top: 30px;
     margin-bottom: 15px;
+  }
+  .about-page {
+    padding-top: 50px;
+  }
+  .about-page .about .pageTitle {
+    font-size: 43px;
+    margin-bottom: 15px;
+  }
+  .about-page .about .text {
+    font-size: 18px;
+  }
+  .about-page .galary .galary__wrapper img {
+    width: 48%;
+    height: 115px;
+  }
+  .about-page .licencies .licencies__wrapper {
+    gap: 10px;
+  }
+  .about-page .licencies .licencies__wrapper img {
+    width: 48%;
+    height: 250px;
+  }
+  .about-page .partners .partners__wrapper .item {
+    width: 48%;
+  }
+  .about-page .vacancies .vacancies-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .about-page .vacancies .vacancies-contacts .send-resume {
+    font-size: 16px;
+    width: 100%;
+  }
+  .about-page .overseers .overseers__wrapper .item {
+    width: 100%;
+  }
+  .about-page .overseers .overseers__wrapper .item .name br {
+    display: none;
+  }
+  .about-page .requisites .requisites__wrapper .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-page .requisites .requisites__wrapper .item .item__title {
+    width: 100%;
   }
 }

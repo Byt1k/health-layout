@@ -646,27 +646,29 @@ body {
 
 // О клинике
 
-.about {
-    padding-top: 90px;
+.about-page {
+    padding-top: 70px;
 
-    .pageTitle {
-        font-weight: 700;
-        font-size: 58px;
-        line-height: 100%;
-        @extend %fontGeorgia;
-        margin-bottom: 24px;
-    }
-
-    .text {
-        font-size: 22px;
-        line-height: 150%;
-        margin-bottom: 8px;
-    }
-
-    .main-img {
-        margin: 26px 0 36px 0;
-        border-radius: 16px;
-        max-width: 100%;
+    .about {
+        .pageTitle {
+            font-weight: 700;
+            font-size: 58px;
+            line-height: 100%;
+            @extend %fontGeorgia;
+            margin-bottom: 24px;
+        }
+    
+        .text {
+            font-size: 22px;
+            line-height: 150%;
+            margin-bottom: 8px;
+        }
+    
+        .main-img {
+            margin: 26px 0 36px 0;
+            border-radius: 16px;
+            max-width: 100%;
+        }
     }
 
     .title {
@@ -679,26 +681,31 @@ body {
     }
 
     .galary {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
+        .galary__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
 
-        img {
-            width: 185px;
-            height: 120px;
-            object-fit: cover;
+            img {
+                width: 185px;
+                height: 120px;
+                object-fit: cover;
+            }
         }
     }
 
     .licencies {
-        display: flex;
-        gap: 25px;
+        .licencies__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 23px;
 
-        img {
-            width: 225px;
-            height: 315px;
-            object-fit: cover;
+            img {
+                width: 225px;
+                height: 315px;
+                object-fit: cover;
+            }
         }
     }
 
@@ -709,97 +716,62 @@ body {
     }
 
     .partners {
-        margin-top: 28px;
-        display: flex;
-        justify-content: space-between;
-        row-gap: 45px;
-        flex-wrap: wrap;
-        .item {
-            width: 30%;
-
-            img {
-                width: 160px;
-                height: 70px;
-                object-fit: contain;
-                margin-bottom: 10px;
-            }
-
-            .name {
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 140%;
-            }
-
-            .desc {
-                font-size: 15px;
-                line-height: 150%;
-                margin: 5px 0 20px 0;
-            }
-
-            .contact-title {
-                font-size: 15px;
-                line-height: 150%;
-                color: #95A8BB;
-            }
-            span {
-                display: block;
-                margin-bottom: 5px;
-            }
-        }
-    }
-
-    .all-partners {
-        width: 100%;
-        height: 340px;
-        margin-top: -340px;
-        position: relative;
-        z-index: 90;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 63.47%);
-        // background-color: #000;
-        display: flex;
-        justify-content: center;
-
-        .btn {
-            @extend %secondaryBtn;
-            width: 360px;
-            height: 61px;
-            margin-top: 187px;
-        }
-    }
-
-    .vacancies-title {
-        margin: 0 0 7px 0;
-    }
+        .partners__wrapper {
+            margin-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            row-gap: 45px;
+            flex-wrap: wrap;
+            .item {
+                width: 30%;
     
-    .vacancies-contacts {
-        margin: 30px 0;
-        display: flex;
-        gap: 34px;
-        align-items: center;
+                img {
+                    width: 160px;
+                    height: 70px;
+                    object-fit: contain;
+                    margin-bottom: 10px;
+                }
+    
+                .name {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
+    
+                .desc {
+                    font-size: 15px;
+                    line-height: 150%;
+                    margin: 5px 0 20px 0;
+                }
+    
+                .contact-title {
+                    font-size: 15px;
+                    line-height: 150%;
+                    color: #95A8BB;
+                }
+                span {
+                    display: block;
+                    margin-bottom: 5px;
+                }
 
-        .send-resume {
-            @extend %mainBtn;
-            gap: 7px;
-            font-size: 20px;
-            width: 290px;
-            height: 70px;
+            }
         }
 
-        .item {
-            .item__title {
-               line-height: 150%;
-               font-size: 18px; 
-               color: #95A8BB;
-            }
+        .all-partners {
+            width: 100%;
+            height: 340px;
+            margin-top: -340px;
+            position: relative;
+            z-index: 90;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 63.47%);
+            display: flex;
+            justify-content: center;
 
-            .item__body {
-                display: block;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 150%;
-                color: $textColor;
-                border-bottom: 1px solid #DCE3EA;
-
+            .btn {
+                @extend %secondaryBtn;
+                width: 360px;
+                height: 61px;
+                margin-top: 187px;
             }
         }
     }
@@ -810,6 +782,8 @@ body {
             padding-bottom: 22px;
 
             .accordion__button {
+                text-align: left;
+                padding-right: 50px;
                 width: 100%;
                 padding-top: 22px;
                 font-weight: 500;
@@ -839,98 +813,200 @@ body {
         }
     }
 
-    .vacancies-accordion {
-        .accordion__body {
-            .location {
-                font-size: 18px;
-                line-height: 150%;
-                color: #7F95AA;
-                margin-bottom: 16px;
+    .vacancies {
+        .vacancies-title {
+            margin: 0 0 7px 0;
+        }
+        
+        .vacancies-contacts {
+            margin: 30px 0;
+            display: flex;
+            gap: 34px;
+            align-items: center;
+    
+            .send-resume {
+                @extend %mainBtn;
+                gap: 7px;
+                font-size: 20px;
+                width: 290px;
+                height: 70px;
             }
-
-            .desc {
-                display: flex;
-                flex-wrap: wrap;
-                column-gap: 50px;
-                row-gap: 20px;
-
-                .item {
-                    font-size: 18px;   
+    
+            .item {
+                .item__title {
+                   line-height: 150%;
+                   font-size: 18px; 
+                   color: #95A8BB;
+                }
+    
+                .item__body {
+                    display: block;
+                    font-weight: 500;
+                    font-size: 20px;
                     line-height: 150%;
-
-                    .item__title {
-                        font-weight: 500;
-                        margin-bottom: 5px;
-                    }
+                    color: $textColor;
+                    border-bottom: 1px solid #DCE3EA;
+    
                 }
             }
-            
-            .respond {
-                @extend %secondaryBtn;
-                width: 180px;
-                height: 50px;
-                margin-top: 20px;
+        }
+    
+        .vacancies-accordion {
+            .accordion__body {
+                .location {
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #7F95AA;
+                    margin-bottom: 16px;
+                }
+    
+                .desc {
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: 50px;
+                    row-gap: 20px;
+    
+                    .item {
+                        font-size: 18px;   
+                        line-height: 150%;
+    
+                        .item__title {
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                
+                .respond {
+                    @extend %secondaryBtn;
+                    width: 180px;
+                    height: 50px;
+                    margin-top: 20px;
+                }
             }
         }
     }
 
-    .organization-accordion {
-        .accordion__body {
-            padding-top: 6px;
-            
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+    .organization {
+        .organization-accordion {
+            .accordion__body {
+                padding-top: 6px;
+                
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
         }
     }
 
     .overseers {
-        margin-top: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-
-        .item {
-            width: 31%;
-
-            .name {
-                margin: 23px 0;
-                font-size: 18px;
-                font-weight: 500;
-                line-height: 140%;
-            }
-
-            .contact-title {
-                color: #95A8BB;
-                font-size: 15px;
-                line-height: 150%;
-            }
-
-            span {
-                display: block;
-                margin-bottom: 5px;
+        .overseers__wrapper {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+    
+            .item {
+                width: 31%;
+    
+                .name {
+                    margin: 23px 0;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 140%;
+                }
+    
+                .contact-title {
+                    color: #95A8BB;
+                    font-size: 15px;
+                    line-height: 150%;
+                }
+    
+                span {
+                    display: block;
+                    margin-bottom: 5px;
+                }
             }
         }
     }
 
     .requisites {
-        padding-bottom: 70px;
+        .requisites__wrapper {
+            margin-top: 15px;
+            padding-bottom: 70px;
 
-        .item {
-            display: flex;
-            margin-bottom: 16px;
-            font-size: 17px;
-            line-height: 150%;
+            .item {
+                display: flex;
+                margin-bottom: 16px;
+                font-size: 17px;
+                line-height: 150%;
 
-            .item__title {
-                width: 300px;
-                margin-right: 30px;
-                color: #7F95AA;
+                .item__title {
+                    min-width: 300px;
+                    width: 300px;
+                    margin-right: 30px;
+                    color: #7F95AA;
+                }
             }
         }
     }
 }
 
+
+.sidebar {
+    position: fixed;
+    padding: 32px 0;
+    width: 280px;
+    border: 1px solid #DCE3EA;
+    border-radius: 16px;
+
+    .sidebar__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        margin-bottom: 14px;
+        margin-left: 34px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+            height: 28px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            a {
+                padding-left: 30px;
+                display: block;
+                color: #5E7790;
+                border-left: 4px solid #fff;
+
+                &.active {
+                    border-left: 4px solid $secondaryColor; 
+                    color: $textColor;
+                }
+            }
+            
+            .count {
+                width: 22px;
+                height: 22px;
+                background: #16324E;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: 500;
+                font-size: 13px;
+            }
+        }
+    }
+}
 
 
 @media screen and (max-width: 1200px) {
@@ -982,6 +1058,41 @@ body {
             }
         }
     }
+
+
+    // О клинике 
+
+    .about-page {
+        .sidebar {
+            width: 240px;
+        }
+
+        .galary {
+            .galary__wrapper {
+                img {
+                    width: 225px;
+                    height: 140px;
+                }
+            }
+        }
+
+        .vacancies {
+            .vacancies-contacts .send-resume {
+                width: 275px;
+            }
+        }
+
+        .requisites {
+            .requisites__wrapper {
+                .item {
+                    .item__title {
+                        min-width: 235px;
+                        width: 235px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -1029,6 +1140,16 @@ body {
             }
         }
     }
+
+    // О клинике 
+
+    .about-page {
+        .sidebar {
+            display: none;
+        }
+    }
+
+    
 }
 
 @media screen and (max-width: 767px) {
@@ -1112,6 +1233,89 @@ body {
             .credits {
                 margin-top: 30px;
                 margin-bottom: 15px;
+            }
+        }
+    }
+
+
+    // О клинике 
+
+    .about-page {
+        padding-top: 50px;
+
+        .about {
+            .pageTitle {
+                font-size: 43px;
+                margin-bottom: 15px;
+            }
+
+            .text { 
+                font-size: 18px;
+            }
+        }
+
+        .galary {
+            .galary__wrapper {
+                img {
+                    width: 48%;
+                    height: 115px;
+                }
+            }
+        }
+
+        .licencies {
+            .licencies__wrapper {
+                gap: 10px;
+                img {
+                    width: 48%;
+                    height: 250px;
+                }
+            }
+        }
+
+        .partners {
+            .partners__wrapper {
+                .item {
+                    width: 48%;
+                }
+            }
+        }
+
+        .vacancies {
+            .vacancies-contacts {
+                flex-direction: column;
+                align-items: flex-start;
+                
+                .send-resume {
+                    font-size: 16px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .overseers {
+            .overseers__wrapper {
+                .item {
+                    width: 100%;
+
+                    .name {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .requisites {
+            .requisites__wrapper {
+                .item {
+                    flex-direction: column;
+                    
+                    .item__title {
+                        width: 100%;
+                    }
+                }
             }
         }
     }

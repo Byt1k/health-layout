@@ -68,3 +68,19 @@ formInputs.forEach(input => {
         })
     })
 })
+
+
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY + 200;
+    
+    document.querySelectorAll('.about-page__section').forEach((el, i) => {
+        if (el.offsetTop  <= scrollDistance) {
+            document.querySelectorAll('.sidebar a').forEach(el => {
+                if (el.classList.contains('active')) {
+                    el.classList.remove('active')
+                }
+            })
+            document.querySelectorAll('.sidebar li')[i].querySelector('a').classList.add('active');
+        }
+    })
+})
