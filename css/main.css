@@ -100,11 +100,11 @@ a, button {
   transition: all .3s ease !important;
 }
 
-.sectionTitle, .main .main__container .left .title, .about-page .about .pageTitle, .about-page .title {
+.sectionTitle, .main .main__container .left .title, .about-page .about .pageTitle, .about-page .title, .service-main .title, .service-advantages .title, .documents .title, .med-certificate .title, .advantages-off-certificate .title, .specialists .title, .price .title {
   font-family: 'Georgia Bold', serif;
 }
 
-.main .main__container .left .btn, .request .form .submit, .about-page .vacancies .vacancies-contacts .send-resume {
+.main .main__container .left .btn, .request .form .submit, .about-page .vacancies .vacancies-contacts .send-resume, .service-main .actions .main-btn, .advantages-off-certificate .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,11 +123,11 @@ a, button {
   height: 73px;
 }
 
-.main .main__container .left .btn:hover, .request .form .submit:hover, .about-page .vacancies .vacancies-contacts .send-resume:hover {
+.main .main__container .left .btn:hover, .request .form .submit:hover, .about-page .vacancies .vacancies-contacts .send-resume:hover, .service-main .actions .main-btn:hover, .advantages-off-certificate .btn:hover {
   opacity: 0.8;
 }
 
-.directions .all-directions, .about-page .partners .all-partners .btn, .about-page .vacancies .vacancies-accordion .accordion__body .respond {
+.directions .all-directions, .about-page .partners .all-partners .btn, .about-page .vacancies .vacancies-accordion .accordion__body .respond, .service-news .service-all-news {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,17 +146,40 @@ a, button {
   height: 62px;
 }
 
-.directions .all-directions:hover, .about-page .partners .all-partners .btn:hover, .about-page .vacancies .vacancies-accordion .accordion__body .respond:hover {
+.directions .all-directions:hover, .about-page .partners .all-partners .btn:hover, .about-page .vacancies .vacancies-accordion .accordion__body .respond:hover, .service-news .service-all-news:hover {
   opacity: 0.8;
 }
 
-.differences .links a, .directions .item .bottom .showAll, .doctors .all-doctors, .news .all-news {
+.service-main .actions .outlined-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #16324E;
+  border-radius: 50px;
+  width: 230px;
+  height: 73px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #16324E;
+}
+
+.service-main .actions .outlined-btn:hover {
+  opacity: 0.8;
+}
+
+.differences .links a, .directions .item .bottom .showAll, .doctors .all-doctors, .news .all-news, .service-advantages .item .right a, .documents .sample .zoom, .price .all-price {
   color: #0FA8AE;
   font-weight: 500;
   font-size: inherit;
 }
 
-.differences .links a:hover, .directions .item .bottom .showAll:hover, .doctors .all-doctors:hover, .news .all-news:hover {
+.differences .links a:hover, .directions .item .bottom .showAll:hover, .doctors .all-doctors:hover, .news .all-news:hover, .service-advantages .item .right a:hover, .documents .sample .zoom:hover, .price .all-price:hover {
   color: #F16321;
 }
 
@@ -461,7 +484,7 @@ body {
   margin-bottom: 24px;
 }
 
-.news .news__slider .item {
+.news .news__slider .item, .news .service-news__slider .item {
   width: 100%;
   height: 320px;
   position: relative;
@@ -478,7 +501,7 @@ body {
           flex-direction: column;
 }
 
-.news .news__slider .item .overflow {
+.news .news__slider .item .overflow, .news .service-news__slider .item .overflow {
   border-radius: 16px;
   position: absolute;
   top: 0;
@@ -490,44 +513,44 @@ body {
   z-index: 0;
 }
 
-.news .news__slider .item .top .sale {
+.news .news__slider .item .top .sale, .news .service-news__slider .item .top .sale {
   position: relative;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.news .news__slider .item .bottom {
+.news .news__slider .item .bottom, .news .service-news__slider .item .bottom {
   position: absolute;
   bottom: 36px;
   left: 33px;
   right: 25px;
 }
 
-.news .news__slider .item .bottom .title {
+.news .news__slider .item .bottom .title, .news .service-news__slider .item .bottom .title {
   font-weight: 500;
   font-size: 26px;
   line-height: 120%;
   margin-bottom: 14px;
 }
 
-.news .news__slider .item .bottom .date {
+.news .news__slider .item .bottom .date, .news .service-news__slider .item .bottom .date {
   font-weight: 500;
 }
 
-.news .news__slider .owl-nav {
+.news .news__slider .owl-nav, .news .service-news__slider .owl-nav {
   width: 104%;
   left: -2%;
   top: 130px;
 }
 
-.news .news__slider .owl-dots {
+.news .news__slider .owl-dots, .news .service-news__slider .owl-dots {
   position: absolute;
   right: 0;
   top: -50px;
 }
 
-.news .news__slider .owl-dots .owl-dot span {
+.news .news__slider .owl-dots .owl-dot span, .news .service-news__slider .owl-dots .owl-dot span {
   margin: 0 5px;
   width: 8px;
   height: 8px;
@@ -1150,8 +1173,389 @@ body {
   font-size: 13px;
 }
 
+.service-main {
+  background: url(../img/bg.png) no-repeat center center/cover;
+  padding: 170px 0;
+}
+
+.service-main .title {
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 100%;
+}
+
+.service-main .text {
+  font-size: 22px;
+  line-height: 140%;
+  margin: 22px 0 28px 0;
+}
+
+.service-main .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.service-advantages {
+  padding-top: 100px;
+}
+
+.service-advantages .title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.service-advantages .text {
+  font-size: 22px;
+  line-height: 140%;
+  margin: 14px 0 42px 0;
+}
+
+.service-advantages .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 18px;
+}
+
+.service-advantages .item .left .icon {
+  max-width: 48px;
+}
+
+.service-advantages .item .right .head {
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.service-advantages .item .right a {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.service-advantages .item .right span {
+  color: #7F95AA;
+}
+
+.service-advantages .info {
+  margin: 90px 0;
+  padding: 30px 40px;
+  background: #E7F7F7;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.service-advantages .info p {
+  font-size: 21px;
+  line-height: 150%;
+}
+
+.service-advantages .info p b {
+  font-weight: 500;
+}
+
+.check-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.check-list li {
+  font-size: 20px;
+  line-height: 150%;
+  position: relative;
+  padding-left: 30px;
+}
+
+.check-list li::before {
+  content: url(../img/check-circle.svg);
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.documents .container {
+  border-bottom: 1px solid #DCE3EA;
+  padding-bottom: 70px;
+}
+
+.documents .title {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.documents .sample {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 34px;
+}
+
+.documents .sample .head {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+}
+
+.documents .sample p {
+  margin: 6px 0 9px 0;
+}
+
+.documents .sample .zoom {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.documents .sample .zoom:hover svg path {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  stroke: #F16321;
+}
+
+.med-certificate {
+  padding: 90px 0 80px 0;
+}
+
+.med-certificate .title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.advantages-off-certificate {
+  padding: 77px 0 90px 0;
+  background: #F9FAFB;
+}
+
+.advantages-off-certificate .title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+
+.advantages-off-certificate .image {
+  max-width: 100%;
+}
+
+.advantages-off-certificate .check-list li::before {
+  content: url(../img/check-circle-gray.svg);
+}
+
+.advantages-off-certificate .btn {
+  margin-top: 28px;
+}
+
+.second-info {
+  margin-top: 80px;
+}
+
+.second-info .wrapper {
+  background-color: #FEF0E9;
+  padding: 40px 60px;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 36px;
+  color: #4E2016;
+}
+
+.second-info .wrapper .title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.second-info .wrapper p {
+  margin-top: 2px;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.specialists {
+  padding: 77px 0 100px 0;
+}
+
+.specialists .title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+}
+
+.specialists .text {
+  margin: 9px 0 26px 0;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.specialists .item {
+  text-align: center;
+}
+
+.specialists .item img {
+  width: 270px;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.specialists .item .name {
+  margin-top: -10px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+}
+
+.price {
+  padding: 84px 0 320px 0;
+  background: #F9FAFB;
+}
+
+.price .title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.price .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 14px;
+}
+
+.price .item .name {
+  white-space: nowrap;
+}
+
+.price .item span {
+  display: block;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #95A8BB), color-stop(50%, transparent));
+  background-image: linear-gradient(to right, #95A8BB 50%, transparent 50%);
+  background-position: 0 1.04em;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  margin-right: 10px;
+}
+
+.price .item .value {
+  font-weight: 500;
+}
+
+.price .all-price {
+  margin-top: 10px;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.price .all-price:hover svg path {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  fill: #F16321;
+}
+
+.service-request {
+  width: 1646px;
+  margin: -210px auto 0 auto;
+  -webkit-box-shadow: 0px 68px 124px -16px rgba(15, 168, 174, 0.4), 0px 28px 52px -16px rgba(15, 168, 174, 0.4);
+          box-shadow: 0px 68px 124px -16px rgba(15, 168, 174, 0.4), 0px 28px 52px -16px rgba(15, 168, 174, 0.4);
+  border-radius: 24px;
+}
+
+.service-request .call-to-tel {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.service-request .call-to-tel p {
+  font-size: 20px;
+  line-height: 120%;
+  color: #F5F7F9;
+}
+
+.service-request .call-to-tel a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 120%;
+  color: #F5F7F9;
+  display: block;
+  margin-top: 8px;
+}
+
+.service-directions {
+  background: none;
+  padding-bottom: 0;
+}
+
+.service-directions .sectionTitle {
+  text-align: center;
+}
+
+.service-directions .all-directions {
+  width: 255px;
+}
+
+.service-directions .container {
+  padding-bottom: 88px;
+  border-bottom: 1px solid #DCE3EA;
+}
+
+.service-news .sectionTitle {
+  text-align: center;
+}
+
+.service-news .service-news__slider .item .more {
+  color: #fff;
+}
+
+.service-news .service-all-news {
+  width: 255px;
+  height: 62px;
+  margin: 28px auto 0 auto;
+}
+
 @media screen and (max-width: 1200px) {
-  .main .main__container .left .btn, .request .form .submit, .about-page .vacancies .vacancies-contacts .send-resume {
+  .main .main__container .left .btn, .request .form .submit, .about-page .vacancies .vacancies-contacts .send-resume, .service-main .actions .main-btn, .advantages-off-certificate .btn {
     font-size: 20px;
     height: 61px;
   }

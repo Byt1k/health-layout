@@ -84,3 +84,31 @@ window.addEventListener('scroll', () => {
         }
     })
 })
+
+
+$('.service-news__slider').owlCarousel({
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: false,
+    navText: [
+        '<img src="img/prev.svg" alt="prev"/>',
+        '<img src="img/next.svg" alt="next"/>'
+    ],
+    responsive:{
+        0: {
+            items: 1,
+            nav: false
+        },
+        768: {
+            nav: false,
+            items: 2
+        },
+        992: {
+            items: 2
+        },
+        1200:{
+            items: 2
+        }
+    }
+});

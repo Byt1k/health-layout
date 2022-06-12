@@ -52,6 +52,23 @@ $textColor: #16324E;
     }
 }
 
+%outlinedBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #16324E;
+    border-radius: 50px;
+    width: 230px;
+    height: 73px;
+    font-size: 22px;
+    font-weight: 500;
+    color: $textColor;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
 %link {
     color: $secondaryColor;
     font-weight: 500;
@@ -358,7 +375,7 @@ body {
         margin-bottom: 24px;
     }
 
-    .news__slider {
+    .news__slider, .service-news__slider {
         .item {
             width: 100%;
             height: 320px;
@@ -1007,6 +1024,401 @@ body {
         }
     }
 }
+
+
+// Услуга 
+
+.service-main {
+    background: url(../img/bg.png) no-repeat center center / cover;
+    padding: 170px 0;
+
+    .title {
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 100%;  
+        @extend %fontGeorgia;
+    }
+
+    .text {
+        font-size: 22px;
+        line-height: 140%;
+        margin: 22px 0 28px 0;
+    }
+
+    .actions {
+        display: flex;
+        gap: 12px;
+
+        .main-btn {
+            @extend %mainBtn;
+        }
+
+        .outlined-btn {
+            @extend %outlinedBtn;
+        }
+    }
+}
+
+.service-advantages {
+    padding-top: 100px;
+
+    .title {
+        font-size: 34px;
+        font-weight: 700;
+        @extend %fontGeorgia;
+        line-height: 120%;
+    }
+
+    .text {
+        font-size: 22px;
+        line-height: 140%;
+        margin: 14px 0 42px 0;
+    }
+
+    .item {
+        display: flex;
+        gap: 18px;
+        
+        .left {
+            .icon {
+                max-width: 48px;
+            }
+        }
+
+        .right {
+            .head {
+                white-space: nowrap;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 140%;
+            }
+    
+            a {
+                @extend %link;
+                font-weight: 300;
+                font-size: 16px;
+            }
+    
+            span {
+                color: #7F95AA;
+            }
+        }
+    }
+
+    .info {
+        margin: 90px 0;
+        padding: 30px 40px;
+        background: #E7F7F7;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        p {
+            font-size: 21px;
+            line-height: 150%;
+
+            b {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li {
+        font-size: 20px;
+        line-height: 150%;
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+            content: url(../img/check-circle.svg);
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
+    }
+}
+
+.documents {
+    .container {
+        border-bottom: 1px solid #DCE3EA;
+        padding-bottom: 70px;
+    }
+
+    .title {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 120%;
+        @extend %fontGeorgia;
+        margin-bottom: 15px;
+    }
+
+    .sample {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+
+        .head {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 120%;
+        }
+
+        p {
+            margin: 6px 0 9px 0;
+        }
+
+        .zoom {
+            @extend %link;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+
+            &:hover {
+                svg path {
+                    transition: all .3s ease;
+                    stroke: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+.med-certificate {
+    padding: 90px 0 80px 0;
+
+    .title {
+        @extend %fontGeorgia;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+}
+
+.advantages-off-certificate {
+    padding: 77px 0 90px 0;
+    background: #F9FAFB;
+
+    .title {
+        @extend %fontGeorgia;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 120%;
+        margin-bottom: 30px
+    }
+
+    .image {
+         max-width: 100%;
+    }
+
+    .check-list {
+
+        li {
+            &::before {
+                content: url(../img/check-circle-gray.svg);
+            }
+        }
+    }
+
+    .btn {
+        @extend %mainBtn;
+        margin-top: 28px;
+    }
+}
+
+.second-info {
+    margin-top: 80px;
+    
+    .wrapper {
+        background-color: #FEF0E9;
+        padding: 40px 60px;
+        border-radius: 24px;
+        display: flex;
+        gap: 36px;
+        color: #4E2016;
+
+        .title {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 150%;
+        }
+
+        p {
+            margin-top: 2px;
+            font-size: 20px;
+            line-height: 140%;
+        }
+    }
+}
+
+.specialists {
+    padding: 77px 0 100px 0;
+
+    .title {
+        @extend %fontGeorgia;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 120%;
+    }
+
+    .text {
+        margin: 9px 0 26px 0;
+        font-size: 22px;
+        line-height: 150%;
+    }
+
+    .item {
+        text-align: center;
+
+        img {
+            width: 270px;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .name {
+            margin-top: -10px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 120%;
+        }
+    }
+}
+
+.price {
+    padding: 84px 0 320px 0;
+    background: #F9FAFB;
+
+    .title {
+        @extend %fontGeorgia;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 120%;
+        margin-bottom: 15px;
+    }
+
+    .item {
+        display: flex;
+        font-size: 18px;
+        line-height: 140%;
+        margin-bottom: 14px;
+        
+        .name {
+            white-space: nowrap;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            // border-bottom: 1px dashed #95A8BB;
+            background-image: linear-gradient(to right, #95A8BB 50%, transparent 50%);
+            background-position: 0 1.04em;
+            background-repeat: repeat-x;
+            background-size: 4px 1px;
+            margin-right: 10px;
+        }   
+
+        .value {
+            font-weight: 500;
+        }
+    }
+
+    .all-price {
+        margin-top: 10px;
+        @extend %link;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &:hover {
+            svg path {
+                transition: all .3s ease;
+                fill: $mainColor;
+            }
+        }
+    }
+}
+
+.service-request {
+    width: 1646px;
+    margin: -210px auto 0 auto;
+    box-shadow: 0px 68px 124px -16px rgba(15, 168, 174, 0.4), 0px 28px 52px -16px rgba(15, 168, 174, 0.4);
+    border-radius: 24px;
+
+    .call-to-tel {
+        text-align: center;
+        margin-top: 40px;
+
+        p {
+            font-size: 20px;
+            line-height: 120%;
+            color: #F5F7F9;
+        }
+
+        a {
+            color: #fff;
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 120%;
+            color: #F5F7F9;
+            display: block;
+            margin-top: 8px;
+
+        }
+    }
+}
+
+.service-directions {
+    background: none;
+    padding-bottom: 0;
+    
+
+    .sectionTitle {
+        text-align: center;
+    }
+
+    .all-directions {
+        width: 255px;
+    }
+
+    .container {
+        padding-bottom: 88px;
+        border-bottom: 1px solid #DCE3EA;
+    }
+}
+
+.service-news {
+    .sectionTitle {
+        text-align: center;
+    }
+
+    .service-news__slider {
+        .item {
+            .more {
+                color: #fff;
+            }
+        }
+    }
+
+    .service-all-news {
+        @extend %secondaryBtn;
+        width: 255px;
+        height: 62px;
+        margin: 28px auto 0 auto;
+    }
+}
+
 
 
 @media screen and (max-width: 1200px) {
