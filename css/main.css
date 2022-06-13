@@ -800,6 +800,10 @@ body {
   margin-bottom: 8px;
 }
 
+.about-page .about .text.fz-20 {
+  font-size: 20px;
+}
+
 .about-page .about .main-img {
   margin: 26px 0 36px 0;
   border-radius: 16px;
@@ -1048,6 +1052,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5px;
+}
+
+.about-page .organization .organization-accordion .accordion__body .second-text {
+  font-size: 18px;
 }
 
 .about-page .overseers .overseers__wrapper {
