@@ -1226,6 +1226,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 18px;
+  width: 20%;
 }
 
 .service-advantages .item .left .icon {
@@ -1626,6 +1627,7 @@ body {
   }
   .service-advantages .item {
     margin-bottom: 34px;
+    width: 50%;
   }
   .service-advantages .info {
     margin-top: 40px;
@@ -1825,6 +1827,9 @@ body {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .service-advantages .item {
+    width: 100%;
+  }
   .service-advantages .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1859,5 +1864,8 @@ body {
   }
   .service-request {
     width: 100%;
+  }
+  .service-directions {
+    padding-bottom: 0;
   }
 }

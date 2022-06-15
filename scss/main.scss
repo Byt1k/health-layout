@@ -1086,6 +1086,7 @@ body {
     .item {
         display: flex;
         gap: 18px;
+        width: 20%;
         
         .left {
             .icon {
@@ -1533,6 +1534,7 @@ body {
     .service-advantages {
         .item {
             margin-bottom: 34px;
+            width: 50%;
         }
 
         .info {
@@ -1847,6 +1849,10 @@ body {
     }
 
     .service-advantages {
+        .item {
+            width: 100%;
+        }
+
         .info {
             flex-direction: column;
         }
@@ -1884,6 +1890,10 @@ body {
 
     .service-request {
         width: 100%;
+    }
+
+    .service-directions {
+        padding-bottom: 0;
     }
 }
 
